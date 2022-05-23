@@ -99,8 +99,7 @@ func update() {
 }
 
 //删
-
-func main() {
+func delete()  {
 	sqlStr := "delete from user_tb1 where username=?"
 	ret, err := db.Exec(sqlStr, "tom")
 	if err != nil {
@@ -111,4 +110,7 @@ func main() {
 		fmt.Printf("影响%v行\n", err)
 	}
 	fmt.Println(effect)
+}
+func main() {
+ insert("qq","4567")
 }
